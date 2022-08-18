@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Payment Card Form</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <form action="#" id="cardForm" class="form" novalidate method="post" autocomplete="off">
+        <div class="credit-card">
+            <div class="card-head">
+                <div class="card-logo">
+                    <img id="cardLogo" src="" alt="" hidden>
+                </div>
+            </div>
+            <div class="card-number" id="cardNumberOutput">
+                <span>####</span>
+                <span>####</span>
+                <span>####</span>
+                <span>####</span>
+            </div>
+            <div class="card-foot">
+                <div class="card-field">
+                    <div class="card-label">Card Holder</div>
+                    <div class="card-value" id="cardNameOutput">Full Name</div>
+                </div>
+                <div class="card-field">
+                    <div class="card-label">Expires</div>
+                    <div class="card-value">
+                        <span id="cardMonthOutput">MM</span>/<span id="cardYearOutput">YY</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-field">
+            <label for="cardNumber" class="form-label">Card Number</label>
+            <input
+                class="form-control"
+                type="text"
+                id="cardNumber"
+                name="cardNumber"
+                minlength="16"
+                required
+            >
+            <small class="error-message"></small>
+        </div>
+        <div class="form-field">
+            <label for="cardName" class="form-label">Card Name</label>
+            <input
+                class="form-control"
+                type="text"
+                id="cardName"
+                name="cardName"
+                maxlength="30"
+                required
+            >
+            <small class="error-message"></small>
+        </div>
+        <div class="field-group">
+            <div class="form-field">
+                <label for="cardMonth" class="form-label">Expiration Date</label>
+                <select class="form-control select" id="cardMonth" name="cardMonth" required>
+                    <option value="">Month</option>
+                    <option value="01">01</option>
+                    <option value="02">02</option>
+                    <option value="03">03</option>
+                    <option value="04">04</option>
+                    <option value="05">05</option>
+                    <option value="06">06</option>
+                    <option value="07">07</option>
+                    <option value="08">08</option>
+                    <option value="09">09</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                </select>
+                <small class="error-message"></small>
+            </div>
+            <div class="form-field">
+                <select class="form-control select" id="cardYear" name="cardYear" required>
+                    <option value="">Year</option>
+                    <option value="2022">2022</option>
+                    <option value="2023">2023</option>
+                    <option value="2024">2024</option>
+                    <option value="2025">2025</option>
+                    <option value="2026">2026</option>
+                    <option value="2027">2027</option>
+                    <option value="2028">2028</option>
+                    <option value="2029">2029</option>
+                    <option value="2030">2030</option>
+                </select>
+                <small class="error-message"></small>
+            </div>
+            <div class="form-field">
+                <label for="cardCvv" class="form-label">CVV</label>
+                <input
+                    class="form-control"
+                    type="password"
+                    id="cardCvv"
+                    name="cardCvv"
+                    minlength="3"
+                    maxlength="4"
+                    required
+                >
+                <small class="error-message"></small>
+            </div>
+        </div>
+        <div class="form-field">
+            <button class="form-control btn" type="submit">Submit</button>
+        </div>
+    </form>
+
+    <script src="./js/index.js"></script>
+</body>
+</html>

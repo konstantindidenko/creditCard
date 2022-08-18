@@ -1,0 +1,9 @@
+@import 'reset';
+@import 'variables';
+@import './components/form-block';
+@import './components/credit-card';
+
+body {
+	background: $bodyBg;
+	font-family: $fontFamily;
+}

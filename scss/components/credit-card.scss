@@ -1,0 +1,77 @@
+.credit-card {
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	top: -170px;
+	border-radius: 10px;
+	max-width: 470px;
+	width: 90%;
+	height: 270px;
+	z-index: 2;
+	background: url('#{$path-img}/card_bg.jpeg') no-repeat $black;
+	background-size: cover;
+	box-shadow: 0 20px 60px 0 rgb($black, 0.4);
+	padding: 25px;
+	color: $white;
+}
+
+.card-head {
+	display: flex;
+	height: 45px;
+	margin-bottom: 45px;
+
+	&::before {
+		content: '';
+		width: 60px;
+		height: 100%;
+		background: url('#{$path-img}/card-chip.png') no-repeat;
+		background-size: contain;
+	}
+}
+
+.card-logo {
+	display: flex;
+	margin-left: auto;
+	height: 100%;
+
+	img {
+		width: 85px;
+		height: 100%;
+		object-fit: contain;
+	}
+}
+
+.card-number {
+	display: flex;
+	justify-content: space-between;
+	font-weight: 500;
+	font-size: clamp(18px, 5vw, 26px);
+	letter-spacing: 4px;
+	margin-bottom: 35px;
+}
+
+.card-foot {
+	display: flex;
+	margin-top: auto;
+}
+
+.card-field {
+	display: flex;
+	flex-direction: column;
+
+	&:last-child {
+		margin-left: auto;
+	}
+}
+
+.card-label {
+	opacity: 0.75;
+	font-size: 15px;
+	font-weight: 500;
+	padding-bottom: 5px;
+}
+
+.card-value {
+	text-transform: uppercase;
+	font-size: 18px;
+}
